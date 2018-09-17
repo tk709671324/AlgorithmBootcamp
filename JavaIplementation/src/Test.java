@@ -6,10 +6,13 @@ public class Test {
 
         int n = 100000;
 
-        SelectionSort selection = new SelectionSort();
-        selection.SortTest(n);
+      /*  SelectionSort selection = new SelectionSort();
+        selection.getTime(n);
         InsertionSort insertion = new InsertionSort();
-        insertion.SortTest(n);
+        insertion.getTime(n);
+        */
+        MergeSort merge = new MergeSort();
+        merge.SortTest(n);
 
     }
 }

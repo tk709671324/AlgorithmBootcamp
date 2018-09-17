@@ -46,6 +46,7 @@ def __mergesort(arr, l, r):
     __mergesort(arr, mid+1, r)
     __merge(arr, l, mid, r)
 
+
 def mergesort(arr):
     __mergesort(arr, 0, int(len(arr))-1 )
     return arr
