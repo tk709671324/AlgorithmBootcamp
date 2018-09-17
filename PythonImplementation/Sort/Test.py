@@ -3,11 +3,11 @@ from SelectionSort import selectionsort
 from InsertSort import insertsort
 import SortTestHelper
 
-
-arr = SortTestHelper.RandomTestList(10000,0,10000)
+n = 100000
+arr = SortTestHelper.RandomTestList(n,0,n)
 print(arr)
 arr1 = arr[:]
 arr2 = arr[:]
 SortTestHelper.TestSort('SelectionSort', selectionsort, arr)
 SortTestHelper.TestSort('MergeSort', mergesort, arr1)
-SortTestHelper.TestSort('4', insertsort, arr2)
+SortTestHelper.TestSort('InsertionSort', insertsort, arr2)

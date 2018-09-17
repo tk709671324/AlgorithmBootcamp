@@ -10,4 +10,3 @@ def insertsort(arr):
 
     return arr
 
-print(1)
