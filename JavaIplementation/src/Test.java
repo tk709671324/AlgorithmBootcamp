@@ -1,5 +1,6 @@
 import Helper.SortTestHelper;
 import SortCollection.*;
+import SortCollection.quickSort.QuickSort;
 
 
 public class Test {
@@ -12,10 +13,10 @@ public class Test {
         InsertionSort insertion = new InsertionSort();
         insertion.getTime(n);
         */
-        OptimizedMerge optimizedMerge = new OptimizedMerge();
-        optimizedMerge.getTime(n);
-        MergeSort mergeSort = new MergeSort();
-        mergeSort.getTime(n);
+        MergeSort merge = new MergeSort();
+        merge.getTime(n);
+        QuickSort quick = new QuickSort();
+        quick.getTime(n);
 
     }
 }
