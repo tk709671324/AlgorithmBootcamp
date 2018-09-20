@@ -55,7 +55,26 @@ public class InsertionSort {
 
         System.out.println("Sort type: Insertion Sort");
         System.out.println("Size:" + n);
-        System.out.println("Time: "+ second + "second");
+        System.out.println("Time: "+ second + " second");
         return second;
+    }
+
+    //using insertion sort to sort specific part in the list [l,r]
+    public void partialInsertion(int[] list, int l, int r){
+
+        for (int i = l+1; i <= r;i++){
+            int temp = list[i];
+            int j = i-1;
+            for(; j >= l; j--){
+                if (temp < list[j])
+                    list[j+1] = list[j];
+                else
+                    break;
+            }
+            list[j+1] = temp;
+
+
+        }
+
     }
 }

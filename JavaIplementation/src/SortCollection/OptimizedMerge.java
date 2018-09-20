@@ -4,7 +4,7 @@ import Helper.SortTestHelper;
 
 import java.util.Arrays;
 
-public class MergeSort {
+public class OptimizedMerge {
     //The entrance of the merge sort function
     public void Merge(int[] list){
         _Mergesort(list, 0, list.length -1);
@@ -16,17 +16,23 @@ public class MergeSort {
         //r : the right border of the to-be-ordered interval.
         if (l >= r)
             return;
-
+        if (r-l < 9) {
+            partialInsertion(list, l, r);   // when list size come to a small number. Insertion sort has a better performance
+            return;
+        }
 
         int mid = (l + r) / 2;
         _Mergesort(list, l, mid);
         _Mergesort(list, mid+1, r);
+        if(list[mid] >= list[mid+1])      // if list[mid] < list[mid+1] , it means the aim list is already ordered
         _Merge(list, l, mid, r);
 
     }
 
     //merge two part in a list into an ordered one .
     private void _Merge(int[] list, int l, int mid, int r){
+
+
 
         int [] assist =  Arrays.copyOfRange(list, l, r+1);
         int k = l;
@@ -57,12 +63,7 @@ public class MergeSort {
 
     }
 
-    public static void main(String[] args){
-        int [] a = {6,1,2,2,4,6,8,33,1,43};
-        MergeSort mergeSort = new MergeSort();
-        mergeSort.Merge(a);
-        System.out.println(Arrays.toString(a));
-    }
+
 
     public void SortTest(int n){
         //n for the size of the list
@@ -85,7 +86,7 @@ public class MergeSort {
             System.out.printf(" %d",list[i]);
         }
 
-        System.out.println("\nSortType: Merge Sort");
+        System.out.println("\nSortType: Optimized Merge Sort");
         System.out.println("Time:" + (endTime - startTime)/1000 + " second");
 
     }
@@ -100,10 +101,28 @@ public class MergeSort {
         double endTime = System.currentTimeMillis();
         double second = (endTime - startTime)/1000;
 
-        System.out.println("Sort type: Merge Sort");
+        System.out.println("Sort type: Optimized Merge Sort");
         System.out.println("Size:" + n);
         System.out.println("Time: "+ second + " second");
         return second;
+    }
+
+    public void partialInsertion(int[] list, int l, int r){
+
+        for (int i = l+1; i <= r;i++){
+            int temp = list[i];
+            int j = i-1;
+            for(; j >= l; j--){
+                if (temp < list[j])
+                    list[j+1] = list[j];
+                else
+                    break;
+            }
+            list[j+1] = temp;
+
+
+        }
+
     }
 
 }
