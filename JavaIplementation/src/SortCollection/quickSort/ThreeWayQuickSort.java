@@ -109,11 +109,5 @@ public class ThreeWayQuickSort {
         return second;
     }
 
-    public static void main(String[] args){
-        int[] a = {1,1,1,1,1,1,1,1,1}
-        ThreeWayQuickSort threeWayQuick = new ThreeWayQuickSort();
-        threeWayQuick.SortTest(200);
-
-
-    }
+    
 }
