@@ -5,42 +5,54 @@ import Helper.SortTestHelper;
 import java.util.Arrays;
 import java.util.Random;
 
-public class QuickSort {
+public class DualPivotQuickSort {
 
-
-
-    private int _partition(int[] list, int l, int r){
+    private int _dualPivotPartition(int[] list, int l,int r){
 
         Random random = new Random();
         swap(list, l, l + random.nextInt(r-l+1));
 
-
         int compareValue = list[l];
+        int i = l+1;
+        int j = r;
 
-        int j = l; // list[l+1,j] < compareValue & list[j+1,i) >= compareValue
+        while(true){
+            while((i <= r)&&(list[i] < compareValue))
+                i++;
+            while((j >= l+1)&&(list[j] > compareValue))
+                j--;
+            //when the 2 while loops stops, list[i](list[]j) should be no smaller(larger) than compareValue
+            if (i > j)
+                break;
 
-        for(int i = l + 1; i <= r; i++){
-            if(list[i] < compareValue)
-                swap(list, ++j, i);
+            swap(list, i, j);
+            i++;
+            j--;
         }
 
-        swap(list , l, j);
+        //in the final situation
+        //from 0 to i-1 should be not larger than compareValue, list[i] >= compareValue
+        //from j+1 to r should be not smaller than compareValure, list[j] <=compareValue
+        // j is the position list[l] should be
+        swap(list, l, j);
 
         return j;
+
+
     }
 
-    private void quickSort(int[] list, int l, int r){
-        if(l >= r )
+    private void dualPivotQuickSort(int[] list,int l, int r){
+        if (l >= r)
             return;
 
-        int p = _partition(list, l, r);
-        quickSort(list, l,p-1);
-        quickSort(list, p+1, r);
+        int pos = _dualPivotPartition(list, l, r);
+        dualPivotQuickSort(list, l, pos);
+        dualPivotQuickSort(list, pos+1, r);
     }
 
     public void sort(int[] list){
         int n = list.length;
-        quickSort(list, 0, n-1);
+        dualPivotQuickSort(list, 0, n-1);
     }
 
     public void swap(int[] arr, int i, int j){
@@ -48,7 +60,6 @@ public class QuickSort {
         arr[i] = arr[j];
         arr[j] = temp;
     }
-    // test
 
     public void SortTest(int n){
         //n for the size of the list
@@ -68,7 +79,7 @@ public class QuickSort {
         System.out.println("The ordered list is:");
         System.out.println(Arrays.toString(list));
 
-        System.out.println("\nSortType: Quick Sort");
+        System.out.println("\nSortType: Dual Pivot Quick Sort");
         System.out.println("Time:" + (endTime - startTime)/1000 + " second");
 
     }
@@ -84,9 +95,14 @@ public class QuickSort {
         double endTime = System.currentTimeMillis();
         double second = (endTime - startTime)/1000;
 
-        System.out.println("Sort type: Quick Sort");
+        System.out.println("Sort type: Dual Pivot Quick Sort");
         System.out.println("Size:" + n);
         System.out.println("Time: "+ second + " second");
         return second;
     }
+
+
+
+
+
 }
