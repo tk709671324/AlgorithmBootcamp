@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82fa2695-01a0-4e5b-bc06-9230e4a45472" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/AlgorithmBootcamp.iml" afterPath="$PROJECT_DIR$/.idea/AlgorithmBootcamp.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/JavaIplementation/.idea/workspace.xml" afterPath="$PROJECT_DIR$/JavaIplementation/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/JavaIplementation/out/production/JavaIplementation/SortCollection/quickSort/QuickSort.class" afterPath="$PROJECT_DIR$/JavaIplementation/out/production/JavaIplementation/SortCollection/quickSort/QuickSort.class" />
-      <change beforePath="$PROJECT_DIR$/JavaIplementation/out/production/JavaIplementation/Test.class" afterPath="$PROJECT_DIR$/JavaIplementation/out/production/JavaIplementation/Test.class" />
-      <change beforePath="$PROJECT_DIR$/JavaIplementation/src/SortCollection/quickSort/QuickSort.java" afterPath="$PROJECT_DIR$/JavaIplementation/src/SortCollection/quickSort/QuickSort.java" />
-      <change beforePath="$PROJECT_DIR$/JavaIplementation/src/Test.java" afterPath="$PROJECT_DIR$/JavaIplementation/src/Test.java" />
+      <change beforePath="$PROJECT_DIR$/JavaIplementation/src/SortCollection/quickSort/ThreeWayQuickSort.java" afterPath="$PROJECT_DIR$/JavaIplementation/src/SortCollection/quickSort/ThreeWayQuickSort.java" />
+      <change beforePath="$PROJECT_DIR$/PythonImplementation/.idea/workspace.xml" afterPath="$PROJECT_DIR$/PythonImplementation/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +20,7 @@
       <file leaf-file-name="MergeSort.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JavaIplementation/src/SortCollection/MergeSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="232">
               <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -65,7 +65,9 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -78,12 +80,16 @@
               <item name="AlgorithmBootcamp" type="462c0819:PsiDirectoryNode" />
               <item name="JavaIplementation" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="AlgorithmBootcamp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlgorithmBootcamp" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaIplementation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,11 +208,12 @@
       <updated>1537416821801</updated>
       <workItem from="1537416823006" duration="83000" />
       <workItem from="1537848939456" duration="21000" />
+      <workItem from="1540764200029" duration="326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104000" />
+    <option name="totallyTimeSpent" value="430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -223,7 +230,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25679544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -262,7 +269,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaIplementation/src/SortCollection/MergeSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaIplementation/src/SortCollection/MergeSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
           <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
